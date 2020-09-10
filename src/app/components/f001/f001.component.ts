@@ -17,7 +17,7 @@ declare var $: any;
   styleUrls: ['./f001.component.css']
 })
 export class F001Component implements OnInit {
-  loading = 'active';
+  loading = '';
   numshow = 0;
   CurrentUser: any = null;
   ReqId = 'F001' + new Date().getTime();
@@ -58,7 +58,7 @@ export class F001Component implements OnInit {
     $('#tabfrom .item').tab();
     $('.ui.checkbox').checkbox();
     $('.ui.accordion').accordion();
-    this.loadCurrentUser();
+    // this.loadCurrentUser();
 
   }
   onChangeAddlist(thisItem: any) {
