@@ -8,7 +8,7 @@
   <h2 class="ui header">
     <img class="img" src="assets/img/icons8-transaction-list-64.png">
     <div class="content">
-      เพื่อตัดค่าใช้จ่ายในการทำบัตรประจำตัวพนักงานใหม่
+      รายงานเพื่อส่งจัดทำบัตรประจำตัวพนักงานใหม่
       <div class="sub header"> รายการทำงาน งานหลังจากอนุมัติแล้ว </div>
     </div>
   </h2>
@@ -23,36 +23,38 @@
     <thead>
       <tr>
         <th>ลำดับที่</th>
-        <th>เลขที่เอกสาร</th>
-        <th>วันที่ยื่นทำรายการ</th>
         <th>รหัสพนักงาน</th>
         <th>ชื่อ - นามสกุล</th>
+        <th>สถานที่</th>
+        <th>ชั้น</th>
         <th>บริการ</th>
-        <th>จำนวนเงิน</th>
-        <th>รอบเดือน Payroll
-          ที่หักค่าใช้จ่าย</th>
+        <th>เหตผล</th>
+        <th>รูป</th>
+        <th>สถานะ</th>
       </tr>
     </thead>
     <tbody>
       <tr (click)="view(true)">
-        <td data-label="Name">1</td>
-        <td data-label="Name">00001/2019</td>
-        <td data-label="Job">10/1/2019</td>
-        <td data-label="Job">11084092</td>
-        <td data-label="Job">นฤมล	นันทิยะกุล</td>
-        <td data-label="Job">บัตรสูญหาย</td>
-        <td data-label="Job">200</td>
-        <td data-label="Job">1/1/2019</td>
+        <td>1</td>
+        <td>11084092</td>
+        <td>นฤมล นันทิยะกุล</td>
+        <td>KSPO</td>
+        <td>14</td>
+        <td>บัตรชำรุด</td>
+        <td></td>
+        <td>มี</td>
+        <td>รอนำส่ง</td>
       </tr>
       <tr>
-        <td data-label="Name">2</td>
-        <td data-label="Name">00002/2019</td>
-        <td data-label="Age">11/1/2019</td>
-        <td data-label="Job">11043338</td>
-        <td data-label="Job">พรรณนิภา	ลีเมฆานนท์</td>
-        <td data-label="Job">บัตรชำรุด</td>
-        <td data-label="Job">100</td>
-        <td data-label="Job">25/2/2019</td>
+        <td>2</td>
+        <td>11043338</td>
+        <td>พรรณนิภา ลีเมฆานนท์</td>
+        <td>Head Office</td>
+        <td>8B</td>
+        <td>บัตรชำรุด</td>
+        <td></td>
+        <td>ไม่มี</td>
+        <td>ส่งแล้ว</td>
       </tr>
     </tbody>
   </table>
@@ -73,26 +75,26 @@
         <td data-label="Name">16/09/2562</td>
         <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
         <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ภูริสิทธิโชค ยศวรรังสรรค์</td>
-        <td data-label="Job">
+        <td>ภูริสิทธิโชค ยศวรรังสรรค์</td>
+        <td>
           <div data-icon="circle" class="ui green rating" data-rating="3" data-max-rating="7"></div>
         </td>
       </tr>
       <tr>
         <td data-label="Name">18/09/2562</td>
         <td data-label="Age">บดินทร์ ด้วงสงกา</td>
-        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">โฆษิตกิตติทัศน์ โรจนธนันต์ชัย</td>
-        <td data-label="Job">
+        <td>ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td>โฆษิตกิตติทัศน์ โรจนธนันต์ชัย</td>
+        <td>
           <div data-icon="circle" class="ui red rating" data-rating="7" data-max-rating="7"></div>
         </td>
       </tr>
       <tr>
         <td data-label="Name">22/09/2562</td>
         <td data-label="Age">กรรณิการ์ วัฒนกุล</td>
-        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
-        <td data-label="Job">
+        <td>ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td>ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
+        <td>
           <div data-icon="circle" class="ui yellow rating" data-rating="5" data-max-rating="7"></div>
         </td>
     </tbody>
@@ -113,25 +115,25 @@
         <td data-label="Name">16/09/2562</td>
         <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
         <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ภูริสิทธิโชค ยศวรรังสรรค์</td>
+        <td>ภูริสิทธิโชค ยศวรรังสรรค์</td>
       </tr>
       <tr>
         <td data-label="Name">18/09/2562</td>
         <td data-label="Age">บดินทร์ ด้วงสงกา</td>
-        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">โฆษิตกิตติทัศน์ โรจนธนันต์ชัย</td>
+        <td>ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td>โฆษิตกิตติทัศน์ โรจนธนันต์ชัย</td>
       </tr>
       <tr>
         <td data-label="Name">19/09/2562</td>
         <td data-label="Name">พัชราวดี วิตตะ </td>
         <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
+        <td>ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
       </tr>
       <tr>
         <td data-label="Name">22/09/2562</td>
         <td data-label="Age">กรรณิการ์ วัฒนกุล</td>
-        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
+        <td>ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td>ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
       </tr>
     </tbody>
   </table>

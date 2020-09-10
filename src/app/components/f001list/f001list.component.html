@@ -29,49 +29,45 @@
     <a class="item" data-tab="completed">ดำเนินการเสร็จสิ้น</a>
   </div>
   <div class="ui tab active" data-tab="apporvepending">
-      <table class="ui single line selectable orange table" style="width:100%">
-          <thead>
-            <tr>
-              <th class="wide two">วันที่ร้องขอ</th>
-              <th class="wide four">วัตถุประสงค์</th>
-              <th>สถานะ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>25/04/2019</td>
-              <td>เพื่อการทดสอบ </td>
-              <td>
-                <div class="ui orange label">
-                  <i class="check icon"></i>
-                  ส่งคำขอ
-                </div>
-                <i class="angle orange right icon"></i>
-                <div class="ui orange label">
-                  <i class="check icon"></i>
-                  ผู้อนุมัติ 1
-                </div>
-                <i class="angle orange right icon"></i>
-                <div class="ui label">
-                  <i class="hourglass half icon"></i>
-                  ผู้อนุมัติ 2
-                </div>
-                <i class="angle grey1 right icon"></i>
-                <div class="ui label">
-                  ผู้อนุมัติ 3
-                </div>
-                <i class="angle grey1 right icon"></i>
-                <div class="ui label">
-                  กำลังดำเนินการ
-                </div>
-                <i class="angle grey1 right icon"></i>
-                <div class="ui label">
-                  ดำเนินการเสร็จสิ้น
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <table class="ui orange selectable line table">
+      <thead>
+        <tr>
+          <th>ลำดับที่</th>
+          <th>เลขที่เอกสาร</th>
+          <th>วันที่ยื่นทำรายการ</th>
+          <th>รหัสพนักงาน</th>
+          <th>ชื่อ - นามสกุล</th>
+          <th>บริการ</th>
+          <th>จำนวนเงิน</th>
+          <th>สถานะ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr >
+          <td data-label="Name">1</td>
+          <td data-label="Name">00001/2019</td>
+          <td data-label="Job">10/1/2019</td>
+          <td data-label="Job">11043338</td>
+          <td data-label="Job">พรรณนิภา	ลีเมฆานนท์</td>
+          <td data-label="Job">บัตรสูญหาย</td>
+          <td data-label="Job">200</td>
+          <td>ส่งคำขอ
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Name">2</td>
+          <td data-label="Name">00002/2019</td>
+          <td data-label="Age">11/1/2019</td>
+          <td data-label="Job">11043338</td>
+          <td data-label="Job">พรรณนิภา	ลีเมฆานนท์</td>
+          <td data-label="Job">บัตรชำรุด</td>
+          <td data-label="Job">100</td>
+          <td>กำลังดำเนินการ
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
   <div class="ui tab" data-tab="apporve">
       <table class="ui single line selectable orange table" style="width:100%">

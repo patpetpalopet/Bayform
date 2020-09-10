@@ -15,6 +15,8 @@ import { ApprovePageComponent } from './components/approve-page/approve-page.com
 import { OperationComponent } from './components/operation/operation.component';
 import { ITAdminPoolComponent } from './components/itadmin-pool/itadmin-pool.component';
 import { RepreApproverComponent } from './components/repre-approver/repre-approver.component';
+import { Operation2Component } from './components/operation2/operation2.component';
+import { Operation3Component } from './components/operation3/operation3.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { RepreApproverComponent } from './components/repre-approver/repre-approv
     ApprovePageComponent,
     OperationComponent,
     ITAdminPoolComponent,
-    RepreApproverComponent
+    RepreApproverComponent,
+    Operation2Component,
+    Operation3Component
   ],
   imports: [
     BrowserModule,

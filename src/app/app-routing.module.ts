@@ -7,12 +7,16 @@ import { F001listComponent } from './components/f001list/f001list.component';
 import { ApprovePortalComponent } from './components/approve-portal/approve-portal.component';
 import { ApprovePageComponent } from './components/approve-page/approve-page.component';
 import { OperationComponent } from './components/operation/operation.component';
+import { Operation2Component } from './components/operation2/operation2.component';
+import { Operation3Component } from './components/operation3/operation3.component';
 import { ITAdminPoolComponent } from './components/itadmin-pool/itadmin-pool.component';
 import { RepreApproverComponent } from './components/repre-approver/repre-approver.component';
 
 const routes: Routes = [
   { path: 'portal', component: PortalComponent },
   { path: 'forms', component: FormsComponent },
+  { path: 'operation2', component: Operation2Component },
+  { path: 'operation3', component: Operation3Component },
   { path: 'f001/form', component: F001Component },
   { path: 'f001/list', component: F001listComponent },
   { path: 'f001/view', component: F001listComponent },
