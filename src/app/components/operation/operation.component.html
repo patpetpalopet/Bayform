@@ -8,7 +8,7 @@
   <h2 class="ui header">
     <img class="img" src="assets/img/icons8-transaction-list-64.png">
     <div class="content">
-      รายการทำงาน
+      เพื่อตัดค่าใช้จ่ายในการทำบัตรประจำตัวพนักงานใหม่
       <div class="sub header"> รายการทำงาน งานหลังจากอนุมัติแล้ว </div>
     </div>
   </h2>
@@ -22,22 +22,34 @@
   <table class="ui orange selectable line table">
     <thead>
       <tr>
-        <th>วันที่ร้องขอ</th>
-        <th>ชื่อผู้ขอ</th>
-        <th>บริการที่ร้องขอ</th>
-        <th>วัตถุประสงค์ในการขอใช้บริการ</th>
-        <th></th>
+        <th>ลำดับที่</th>
+        <th>เลขที่เอกสาร</th>
+        <th>วันที่ยื่นทำรายการ</th>
+        <th>รหัสพนักงาน</th>
+        <th>ชื่อ - นามสกุล</th>
+        <th>บริการ</th>
+        <th>รอบเดือน Payroll
+          ที่หักค่าใช้จ่าย</th>
       </tr>
     </thead>
     <tbody>
       <tr (click)="view(true)">
-        <td data-label="Name">16/09/2562</td>
-        <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
-        <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">เพื่อทดสอบระบบ</td>
-        <td data-label="Job">
-          <div data-icon="circle" class="ui green rating" data-rating="3" data-max-rating="7"></div>
-        </td>
+        <td data-label="Name">1</td>
+        <td data-label="Name">00001/2019</td>
+        <td data-label="Job">10/1/2019</td>
+        <td data-label="Job">11084092</td>
+        <td data-label="Job">นฤมล	นันทิยะกุล</td>
+        <td data-label="Job">บัตรสูญหาย</td>
+        <td data-label="Job">200</td>
+      </tr>
+      <tr>
+        <td data-label="Name">2</td>
+        <td data-label="Name">00002/2019</td>
+        <td data-label="Age">11/1/2019</td>
+        <td data-label="Job">11043338</td>
+        <td data-label="Job">พรรณนิภา	ลีเมฆานนท์</td>
+        <td data-label="Job">บัตรชำรุด</td>
+        <td data-label="Job">100</td>
       </tr>
     </tbody>
   </table>
@@ -58,7 +70,7 @@
         <td data-label="Name">16/09/2562</td>
         <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
         <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ภูริสิทธิโชค	ยศวรรังสรรค์</td>
+        <td data-label="Job">ภูริสิทธิโชค ยศวรรังสรรค์</td>
         <td data-label="Job">
           <div data-icon="circle" class="ui green rating" data-rating="3" data-max-rating="7"></div>
         </td>
@@ -94,11 +106,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr >
+      <tr>
         <td data-label="Name">16/09/2562</td>
         <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
         <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
-        <td data-label="Job">ภูริสิทธิโชค	ยศวรรังสรรค์</td>
+        <td data-label="Job">ภูริสิทธิโชค ยศวรรังสรรค์</td>
       </tr>
       <tr>
         <td data-label="Name">18/09/2562</td>
