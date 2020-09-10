@@ -1,6 +1,6 @@
 <!-- <app-topmenu></app-topmenu> -->
 <div class="ui {{loading}}  dimmer">
-  <div class="ui large text orange loader">Loading</div>
+  <div class="ui large text yellow loader">Loading</div>
 </div>
 <div class="ui breadcrumb">
   <a class="section" routerLink="/portal">หน้าหลัก</a>
@@ -12,12 +12,12 @@
 <h2 class="ui header">
   <img class="img" src="assets/img/form.svg">
   <div class="content">
-    ขอยกเว้นนโยบาย/มาตรฐาน
-    <div class="sub header"> ขอสิทธิ์ใช้งาน Device ,ขอติดตั้ง VPN,ขอใช้งาน Facebook, Line, Youtube, Google Drive etc.
+    ขอทำบัตรประจำตัวพนักงานใหม่
+    <div class="sub header"> ขอทำบัตรประจำตัวพนักงานใหม่ บัตรสูญหาย บัตรชำรุด เปลี่ยนชื่อ เปลี่ยนนามสกุล
     </div>
   </div>
 </h2>
-<div class="ui pointing secondary menu orange " id="tabfrom">
+<div class="ui pointing secondary menu yellow " id="tabfrom">
   <a class="item active" data-tab="personal" (click)="scrollUp()">
     รายละเอียดผู้ขอ
   </a>
@@ -29,20 +29,20 @@
   <div class="ui segment stacked ">
     <h3 class="ui header">
       <img class="ui image" src="assets/img/icons8-checked-identification-documents-64.png">
-      <div class="content " style="color: #F37022">
+      <div class="content " style="color: #FFC423">
         รายละเอียดผู้ขอทั่วไป
       </div>
     </h3>
     <table class="ui table">
       <tbody>
         <tr>
-          <td class="wide three orange">ชื่อ-สกุล (ไทย)</td>
+          <td class="wide three yellow">ชื่อ-สกุล (ไทย)</td>
           <td class="wide five">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Thainame" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="wide two orange">รหัสพนักงาน</td>
+          <td class="wide two yellow">รหัสพนักงาน</td>
           <td colspan="3">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.EmployeeId" [ngModelOptions]="{standalone: true}">
@@ -50,13 +50,13 @@
           </td>
         </tr>
         <tr>
-          <td class="orange">ชื่อ-สกุล (ENG)</td>
+          <td class="yellow">ชื่อ-สกุล (ENG)</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Engname" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="orange">RC Code</td>
+          <td class="yellow">RC Code</td>
           <td colspan="3">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.RCCode" [ngModelOptions]="{standalone: true}">
@@ -64,19 +64,19 @@
           </td>
         </tr>
         <tr>
-          <td class="orange">ตำแหน่ง</td>
+          <td class="yellow">ตำแหน่ง</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Position" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="orange">Project Code</td>
+          <td class="yellow">Project Code</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.ProjectCode" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="wide two orange">Account Code</td>
+          <td class="wide two yellow">Account Code</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.AccountCode" [ngModelOptions]="{standalone: true}">
@@ -84,13 +84,13 @@
           </td>
         </tr>
         <tr>
-          <td class="orange">ส่วน/สาขา/กลุ่ม</td>
+          <td class="yellow">ส่วน/สาขา/กลุ่ม</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Section" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="orange">โทรศัพท์</td>
+          <td class="yellow">โทรศัพท์</td>
           <td colspan="3">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Phone" [ngModelOptions]="{standalone: true}">
@@ -98,13 +98,13 @@
           </td>
         </tr>
         <tr>
-          <td class="orange">ฝ่าย/สำนัก/สาย</td>
+          <td class="yellow">ฝ่าย/สำนัก/สาย</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Division" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="orange">E-mail</td>
+          <td class="yellow">E-mail</td>
           <td colspan="3">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Mail" [ngModelOptions]="{standalone: true}">
@@ -114,13 +114,13 @@
       </tbody>
     </table>
   </div>
-  <button class="ui fluid orange big right floated button" (click)="tabGoTo('typee')">ยืนยันข้อมูล</button>
+  <button class="ui fluid yellow big right floated button" (click)="tabGoTo('typee')">ยืนยันข้อมูล</button>
 </div>
 <div class="ui tab " data-tab="typee">
   <div class="ui one column stackable centered segment stacked page grid">
     <h3 class="ui header">
       <img class="ui image" src="assets/img/icons8-transaction-list-64.png">
-      <div class="content " style="color: #F37022">
+      <div class="content " style="color: #FFC423">
         เลือกบริการ
       </div>
     </h3>
@@ -128,31 +128,57 @@
       <div class="field">
         <div class="ui checkbox">
           <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.divice">
-          <label>ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</label>
+          <label>บัตรสูญหาย จำนวน 200 บาท</label>
         </div>
       </div>
       <div class="field">
         <div class="ui checkbox">
           <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.vpn">
-          <label>ขอติดตั้ง VPN</label>
+          <label>บัตรชำรุด จำนวน 100 บาท</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.ssss">
+          <label>เปลี่ยนชื่อ</label>
+        </div>
+        <div class="inline fields" >
+          <div class="field">
+            <label>จาก</label>
+            <input type="text" name="" id="">
+          </div>
+          <div class="field">
+            <label>เป็น</label>
+            <input type="text" name="" id="">
+          </div>
         </div>
       </div>
       <div class="field">
         <div class="ui checkbox">
           <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.social">
-          <label>ขอใช้งาน Facebook, Line, Youtube, Google Drive etc.</label>
+          <label>เปลี่ยนนามสกุล</label>
+        </div>
+        <div class="inline fields">
+          <div class="field">
+            <label>จาก</label>
+            <input type="text" name="" id="">
+          </div>
+          <div class="field">
+            <label>เป็น</label>
+            <input type="text" name="" id="">
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <button class="ui fluid orange big right floated button" (click)="tabGoTo('formfill')">ยืนยันข้อมูล</button>
+  <button class="ui fluid yellow big right floated button" (click)="tabGoTo('formfill')">ยืนยันข้อมูล</button>
 </div>
 
 <div class="ui tab " data-tab="formfill">
   <div class="ui form segment stacked">
     <h3 class="ui header">
       <img class="ui image" src="assets/img/computer-64.png">
-      <div class="content " style="color: #F37022">
+      <div class="content " style="color: #FFC423">
         ข้อมูลเครื่องคอมพิวเตอร์
       </div>
     </h3>
@@ -184,7 +210,7 @@
     </div>
     <h3 class="ui header">
       <img class="ui image" src="assets/img/form.png">
-      <div class="content " style="color: #F37022">
+      <div class="content " style="color: #FFC423">
         ข้อมูลทั่วไป
       </div>
     </h3>
@@ -216,11 +242,11 @@
       <table class="ui table">
         <tbody>
           <tr *ngIf="numshow>0">
-            <td class="wide one orange">ชื่อ</td>
+            <td class="wide one yellow">ชื่อ</td>
             <td>ชนินธร เจนงามกุล</td>
-            <td class="wide two orange">รหัสพนักงาน</td>
+            <td class="wide two yellow">รหัสพนักงาน</td>
             <td>10098516</td>
-            <td class="wide two orange">Computer Name</td>
+            <td class="wide two yellow">Computer Name</td>
             <td>TB591000958515P</td>
             <td class="wide one ">
               <div class="ui red fluid button" (click)="numshow=numshow-1">
@@ -229,11 +255,11 @@
             </td>
           </tr>
           <tr *ngIf="numshow>1">
-            <td class="wide one orange">ชื่อ</td>
+            <td class="wide one yellow">ชื่อ</td>
             <td>กฤตวัฒน์ สุวานิชย์</td>
-            <td class="wide two orange">รหัสพนักงาน</td>
+            <td class="wide two yellow">รหัสพนักงาน</td>
             <td>10015268</td>
-            <td class="wide two orange">Computer Name</td>
+            <td class="wide two yellow">Computer Name</td>
             <td>TB591000188562P</td>
             <td class="wide one ">
               <div class="ui red fluid button" (click)="numshow=numshow-1">
@@ -242,11 +268,11 @@
             </td>
           </tr>
           <tr *ngIf="numshow>2">
-            <td class="wide one orange">ชื่อ</td>
+            <td class="wide one yellow">ชื่อ</td>
             <td>บดินทร์ ด้วงสงกา</td>
-            <td class="wide two orange">รหัสพนักงาน</td>
+            <td class="wide two yellow">รหัสพนักงาน</td>
             <td>168154165413</td>
-            <td class="wide two orange">Computer Name</td>
+            <td class="wide two yellow">Computer Name</td>
             <td>681714631453</td>
             <td class="wide one ">
               <div class="ui red fluid button" (click)="numshow=numshow-1">
@@ -255,18 +281,18 @@
             </td>
           </tr>
           <tr>
-            <td class="wide one orange">ชื่อ</td>
+            <td class="wide one yellow">ชื่อ</td>
             <td class="wide three">
               <select class="ui fluid search dropdown" id="peplist">
                 <option value=""></option>
                 <option value="{{pep.id}}" *ngFor="let pep of peplist">{{pep.name}}</option>
               </select>
             </td>
-            <td class="wide two orange">รหัสพนักงาน</td>
+            <td class="wide two yellow">รหัสพนักงาน</td>
             <td class="wide two">
               {{peplistId}}
             </td>
-            <td class="wide two orange">Computer Name</td>
+            <td class="wide two yellow">Computer Name</td>
             <td class="wide two">
               <select class="ui fluid search dropdown">
                 <option value=""></option>
@@ -274,7 +300,7 @@
               </select>
             </td>
             <td class="wide one ">
-              <div class="ui orange fluid button" (click)="numshow=numshow+1">
+              <div class="ui yellow fluid button" (click)="numshow=numshow+1">
                 เพิ่ม
               </div>
             </td>
@@ -382,7 +408,8 @@
         </div>
         <div class="field">
           <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden"   [(ngModel)]="SocialService.SocialSelect.other.IsSelect" [ngModelOptions]="{standalone: true}">
+            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="SocialService.SocialSelect.other.IsSelect"
+              [ngModelOptions]="{standalone: true}">
             <label>อื่น ๆ</label>
           </div>
         </div>
@@ -404,61 +431,61 @@
     คุณยังไม่ได้เลือกบริการ กรุณาเลือกบริการที่ต้องการ
     ก่อนเข้าหน้านี้</div>
   <br>
-  <button class="ui fluid orange big right floated button" (click)="tabGoTo('confirm')">ยืนยันข้อมูล</button>
+  <button class="ui fluid yellow big right floated button" (click)="tabGoTo('confirm')">ยืนยันข้อมูล</button>
   <br><br>
 </div>
 <div class="ui tab " data-tab="confirm">
   <div class="segment stacked ui form">
     <h3 class="ui header">
       <img class="ui image" src="assets/img/icons8-checked-identification-documents-64.png">
-      <div class="content " style="color: #F37022">
+      <div class="content " style="color: #FFC423">
         รายละเอียดผู้ขอทั่วไป
       </div>
     </h3>
     <table class="ui table">
       <tbody>
         <tr>
-          <td class="wide three orange">ชื่อ-สกุล (ไทย)</td>
+          <td class="wide three yellow">ชื่อ-สกุล (ไทย)</td>
           <td class="wide five">{{UserFill.Thainame}}</td>
-          <td class="wide two orange">รหัสพนักงาน</td>
+          <td class="wide two yellow">รหัสพนักงาน</td>
           <td colspan="3">{{UserFill.EmployeeId}}</td>
         </tr>
         <tr>
-          <td class="orange">ชื่อ-สกุล (ENG)</td>
+          <td class="yellow">ชื่อ-สกุล (ENG)</td>
           <td>{{UserFill.Engname}}</td>
-          <td class="orange">RC Code</td>
+          <td class="yellow">RC Code</td>
           <td colspan="3">{{UserFill.RCCode}}</td>
         </tr>
         <tr>
-          <td class="orange">ตำแหน่ง</td>
+          <td class="yellow">ตำแหน่ง</td>
           <td>{{UserFill.Position}}</td>
-          <td class="orange">Project Code</td>
+          <td class="yellow">Project Code</td>
           <td>{{UserFill.ProjectCode}}</td>
-          <td class="wide two orange">Account Code</td>
+          <td class="wide two yellow">Account Code</td>
           <td>{{UserFill.AccountCode}}</td>
         </tr>
         <tr>
-          <td class="orange">ส่วน/สาขา/กลุ่ม</td>
+          <td class="yellow">ส่วน/สาขา/กลุ่ม</td>
           <td>{{UserFill.Section}}</td>
-          <td class="orange">โทรศัพท์</td>
+          <td class="yellow">โทรศัพท์</td>
           <td colspan="3">{{UserFill.Phone}}</td>
         </tr>
         <tr>
-          <td class="orange">ฝ่าย/สำนัก/สาย</td>
+          <td class="yellow">ฝ่าย/สำนัก/สาย</td>
           <td>{{UserFill.Division}}</td>
-          <td class="orange">E-mail</td>
+          <td class="yellow">E-mail</td>
           <td colspan="3">{{UserFill.Mail}}</td>
         </tr>
         <tr>
-          <td class="orange">สถานที่ติดตั้ง อาคาร/ชั้น </td>
+          <td class="yellow">สถานที่ติดตั้ง อาคาร/ชั้น </td>
           <td colspan="5">{{dataform.Location}}</td>
         </tr>
         <tr>
-          <td class="orange">วัตถุประสงค์ในการขอใช้บริการ (กรุณาระบุเหตุผลให้ชัดเจน) </td>
+          <td class="yellow">วัตถุประสงค์ในการขอใช้บริการ (กรุณาระบุเหตุผลให้ชัดเจน) </td>
           <td colspan="5">{{dataform.Descriotion}}</td>
         </tr>
         <tr>
-          <td class="orange">ประเภทการขอ</td>
+          <td class="yellow">ประเภทการขอ</td>
           <td colspan="5">
             <span *ngIf="isSelf">ขอเพื่อใช้งานเอง</span>
             &nbsp;&nbsp;
@@ -470,49 +497,49 @@
     <table class="ui table" *ngIf="isOther">
       <tbody>
         <tr *ngIf="numshow>0">
-          <td class="wide one orange">ชื่อ</td>
+          <td class="wide one yellow">ชื่อ</td>
           <td>ชนินธร เจนงามกุล</td>
-          <td class="wide two orange">รหัสพนักงาน</td>
+          <td class="wide two yellow">รหัสพนักงาน</td>
           <td>10098516</td>
-          <td class="wide two orange">Computer Name</td>
+          <td class="wide two yellow">Computer Name</td>
           <td>TB591000958515P</td>
         </tr>
         <tr *ngIf="numshow>1">
-          <td class="wide one orange">ชื่อ</td>
+          <td class="wide one yellow">ชื่อ</td>
           <td>กฤตวัฒน์ สุวานิชย์</td>
-          <td class="wide two orange">รหัสพนักงาน</td>
+          <td class="wide two yellow">รหัสพนักงาน</td>
           <td>10015268</td>
-          <td class="wide two orange">Computer Name</td>
+          <td class="wide two yellow">Computer Name</td>
           <td>TB591000188562P</td>
         </tr>
         <tr *ngIf="numshow>2">
-          <td class="wide one orange">ชื่อ</td>
+          <td class="wide one yellow">ชื่อ</td>
           <td>บดินทร์ ด้วงสงกา</td>
-          <td class="wide two orange">รหัสพนักงาน</td>
+          <td class="wide two yellow">รหัสพนักงาน</td>
           <td>168154165413</td>
-          <td class="wide two orange">Computer Name</td>
+          <td class="wide two yellow">Computer Name</td>
           <td>681714631453</td>
         </tr>
       </tbody>
     </table>
     <h3 class="ui header">
       <img class="ui image" src="assets/img/computer-64.png">
-      <div class="content " style="color: #F37022">
+      <div class="content " style="color: #FFC423">
         ข้อมูลเครื่องคอมพิวเตอร์
       </div>
     </h3>
     <table class="ui table">
       <tbody>
         <tr>
-          <td class="wide two orange">Computer Name</td>
+          <td class="wide two yellow">Computer Name</td>
           <td>{{dataform.ComputerInfo.cn}}</td>
-          <td class="wide two orange">Brand/Model</td>
+          <td class="wide two yellow">Brand/Model</td>
           <td>{{dataform.ComputerInfo.brand}}</td>
         </tr>
         <tr>
-          <td class="wide two orange">Serial Number</td>
+          <td class="wide two yellow">Serial Number</td>
           <td>{{dataform.ComputerInfo.sn}}</td>
-          <td class="wide two orange">รหัสทรัพย์สิน</td>
+          <td class="wide two yellow">รหัสทรัพย์สิน</td>
           <td>{{dataform.ComputerInfo.pc}}</td>
         </tr>
       </tbody>
@@ -520,14 +547,14 @@
     <div *ngIf="dataform.ServiceSelect.divice">
       <h3 class="ui header">
         <img class="ui image" src="assets/img/device-64.png">
-        <div class="content " style="color: #F37022">
+        <div class="content " style="color: #FFC423">
           ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card
         </div>
       </h3>
       <table class="ui table">
         <tbody>
           <tr>
-            <td class="wide two orange">Device Name</td>
+            <td class="wide two yellow">Device Name</td>
             <td>
               <label class="ui label" *ngIf="DiviceService.DeviceSelect.cdrom.IsSelect"><i
                   class="compact disc icon"></i>CD-ROM</label>
@@ -540,7 +567,7 @@
             </td>
           </tr>
           <tr>
-            <td class="wide two orange">เหตุผล</td>
+            <td class="wide two yellow">เหตุผล</td>
             <td>{{DiviceService.Descriprion}}</td>
           </tr>
         </tbody>
@@ -549,14 +576,14 @@
     <div *ngIf="dataform.ServiceSelect.vpn" style="padding-top: 1.5em;">
       <h3 class="ui header">
         <img class="ui image" src="assets/img/VPN.svg">
-        <div class="content " style="color: #F37022">
+        <div class="content " style="color: #FFC423">
           ขอติดตั้ง VPN
         </div>
       </h3>
       <table class="ui table">
         <tbody>
           <tr>
-            <td class="wide two orange">เหตุผล</td>
+            <td class="wide two yellow">เหตุผล</td>
             <td>{{VPNService.Description}}</td>
           </tr>
         </tbody>
@@ -565,14 +592,14 @@
     <div *ngIf="dataform.ServiceSelect.social" style="padding-top: 1.5em;">
       <h3 class="ui header">
         <img class="ui image" src="assets/img/social.svg">
-        <div class="content " style="color: #F37022">
+        <div class="content " style="color: #FFC423">
           ขอใช้งาน Facebook, Line, Youtube, Google Drive etc.
         </div>
       </h3>
       <table class="ui table">
         <tbody>
           <tr>
-            <td class="wide two orange">Device Name</td>
+            <td class="wide two yellow">Device Name</td>
             <td>
               <label class="ui label" *ngIf="SocialService.SocialSelect.facebook.IsSelect"><i style="color: #4267B2"
                   class="ui icon facebook square"></i>Facebook</label>
@@ -588,7 +615,7 @@
             </td>
           </tr>
           <tr>
-            <td class="wide two orange">เหตุผล</td>
+            <td class="wide two yellow">เหตุผล</td>
             <td>{{SocialService.Description}}</td>
           </tr>
         </tbody>
@@ -596,7 +623,7 @@
     </div>
 
   </div>
-  <button class="ui fluid orange big right floated button" (click)="test('req')">ส่งคำขอ</button>
-  <!-- <button class="ui fluid orange big right floated button"  routerLink="/f001/list">ส่งคำขอ</button> -->
+  <button class="ui fluid yellow big right floated button" (click)="test('req')">ส่งคำขอ</button>
+  <!-- <button class="ui fluid yellow big right floated button"  routerLink="/f001/list">ส่งคำขอ</button> -->
 </div>
 <div style="height: 5em"></div>

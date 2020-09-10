@@ -58,7 +58,7 @@ export class F001Component implements OnInit {
     $('#tabfrom .item').tab();
     $('.ui.checkbox').checkbox();
     $('.ui.accordion').accordion();
-    // this.loadCurrentUser();
+    this.loadCurrentUser();
 
   }
   onChangeAddlist(thisItem: any) {
