@@ -1,0 +1,8 @@
+.ui.ui.menu .orange.active.item, .ui.ui.orange.menu .active.item, .ui.ui.orange.menu .active.item:hover {
+  color: #f2711c;
+  font-size: 1.2em
+}
+.ui.secondary.pointing.menu .active.item {
+  color: #f2711c;
+  font-size: 1.2em
+}

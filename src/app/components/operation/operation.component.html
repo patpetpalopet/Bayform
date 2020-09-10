@@ -1,0 +1,285 @@
+<!-- <app-topmenu></app-topmenu> -->
+<div class="ui breadcrumb">
+  <a class="section" routerLink="/portal">หน้าหลัก</a>
+  <i class="right angle icon divider"></i>
+  <div class="active section">งาน</div>
+</div>
+<div class="ten wide column">
+  <h2 class="ui header">
+    <img class="img" src="assets/img/icons8-transaction-list-64.png">
+    <div class="content">
+      รายการทำงาน
+      <div class="sub header"> รายการทำงาน งานหลังจากอนุมัติแล้ว </div>
+    </div>
+  </h2>
+</div>
+<div class="ui pointing secondary menu" id="tabwork">
+  <a class="item active" data-tab="notpending">ยังไม่ได้ดำเนินการ</a>
+  <a class="item" data-tab="pending">กำลังดำเนินการ</a>
+  <a class="item " data-tab="completed">ดำเนินการเสร็จสิ้น</a>
+</div>
+<div class="ui tab active" data-tab="notpending">
+  <table class="ui orange selectable line table">
+    <thead>
+      <tr>
+        <th>วันที่ร้องขอ</th>
+        <th>ชื่อผู้ขอ</th>
+        <th>บริการที่ร้องขอ</th>
+        <th>วัตถุประสงค์ในการขอใช้บริการ</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (click)="view(true)">
+        <td data-label="Name">16/09/2562</td>
+        <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
+        <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">เพื่อทดสอบระบบ</td>
+        <td data-label="Job">
+          <div data-icon="circle" class="ui green rating" data-rating="3" data-max-rating="7"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="ui tab" data-tab="pending">
+  <table class="ui orange selectable line table">
+    <thead>
+      <tr>
+        <th>วันที่ร้องขอ</th>
+        <th>ชื่อผู้ขอ</th>
+        <th>บริการที่ร้องขอ</th>
+        <th>ผู้รับผิดชอบ</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr (click)="view(false)">
+        <td data-label="Name">16/09/2562</td>
+        <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
+        <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">ภูริสิทธิโชค	ยศวรรังสรรค์</td>
+        <td data-label="Job">
+          <div data-icon="circle" class="ui green rating" data-rating="3" data-max-rating="7"></div>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">18/09/2562</td>
+        <td data-label="Age">บดินทร์ ด้วงสงกา</td>
+        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">โฆษิตกิตติทัศน์ โรจนธนันต์ชัย</td>
+        <td data-label="Job">
+          <div data-icon="circle" class="ui red rating" data-rating="7" data-max-rating="7"></div>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Name">22/09/2562</td>
+        <td data-label="Age">กรรณิการ์ วัฒนกุล</td>
+        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
+        <td data-label="Job">
+          <div data-icon="circle" class="ui yellow rating" data-rating="5" data-max-rating="7"></div>
+        </td>
+    </tbody>
+  </table>
+</div>
+<div class="ui tab" data-tab="completed">
+  <table class="ui orange selectable line table">
+    <thead>
+      <tr>
+        <th>วันที่ร้องขอ</th>
+        <th>ชื่อผู้ขอ</th>
+        <th>บริการที่ร้องขอ</th>
+        <th>ผู้รับผิดชอบ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td data-label="Name">16/09/2562</td>
+        <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
+        <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">ภูริสิทธิโชค	ยศวรรังสรรค์</td>
+      </tr>
+      <tr>
+        <td data-label="Name">18/09/2562</td>
+        <td data-label="Age">บดินทร์ ด้วงสงกา</td>
+        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">โฆษิตกิตติทัศน์ โรจนธนันต์ชัย</td>
+      </tr>
+      <tr>
+        <td data-label="Name">19/09/2562</td>
+        <td data-label="Name">พัชราวดี วิตตะ </td>
+        <td data-label="Age">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
+      </tr>
+      <tr>
+        <td data-label="Name">22/09/2562</td>
+        <td data-label="Age">กรรณิการ์ วัฒนกุล</td>
+        <td data-label="Job">ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card</td>
+        <td data-label="Job">ปัทมสุพัฒน์ชัย มหัทธนธีรนันท์</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="ui pagination menu">
+    <a class="active item">
+      1
+    </a>
+    <a class=" item">
+      2
+    </a>
+    <a class=" item">
+      3
+    </a>
+    <div class="disabled item">
+      ...
+    </div>
+    <a class="item">
+      10
+    </a>
+    <a class="item">
+      11
+    </a>
+    <a class="item">
+      12
+    </a>
+  </div>
+</div>
+
+<div class="ui large modal">
+  <div class="scrolling  content">
+    <h3 class="ui header">
+      <img class="ui image" src="assets/img/icons8-checked-identification-documents-64.png">
+      <div class="content " style="color: #F37022">
+        รายละเอียดผู้ขอทั่วไป
+      </div>
+    </h3>
+    <table class="ui table">
+      <tbody>
+        <tr>
+          <td class="wide three orange">ชื่อ-สกุล (ไทย)</td>
+          <td class="wide five">สายัณห์ พรหมปัญโญ</td>
+          <td class="wide two orange">รหัสพนักงาน</td>
+          <td colspan="3">10000933</td>
+        </tr>
+        <tr>
+          <td class="orange">ชื่อ-สกุล (ENG)</td>
+          <td>SAYAN PROMPANYO</td>
+          <td class="orange">RC Code</td>
+          <td colspan="3">14103000399</td>
+        </tr>
+        <tr>
+          <td class="orange">ตำแหน่ง</td>
+          <td>เจ้าหน้าที่ระบบสารสนเทศและเทคโนโลยีอาวุโส</td>
+          <td class="orange">Project Code</td>
+          <td>-</td>
+          <td class="wide two orange">Account Code</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td class="orange">ส่วน/สาขา/กลุ่ม</td>
+          <td>-</td>
+          <td class="orange">โทรศัพท์</td>
+          <td colspan="3">02-2903400 #2252</td>
+        </tr>
+        <tr>
+          <td class="orange">ฝ่าย/สำนัก/สาย</td>
+          <td>-</td>
+          <td class="orange">E-mail</td>
+          <td colspan="3">Sayan.Pro@thanachart.co.th</td>
+        </tr>
+        <tr>
+          <td class="orange">สถานที่ติดตั้ง อาคาร/ชั้น </td>
+          <td colspan="5">HG</td>
+        </tr>
+        <tr>
+          <td class="orange">วัตถุประสงค์ในการขอใช้บริการ </td>
+          <td colspan="5">ใช้เพื่อการทดสอบ</td>
+        </tr>
+        <tr>
+          <td class="orange">ประเภทการขอ</td>
+          <td colspan="5">ขอเพื่อใช้งานเอง</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="ui header">
+      <img class="ui image" src="assets/img/computer-64.png">
+      <div class="content " style="color: #F37022">
+        ข้อมูลเครื่องคอมพิวเตอร์
+      </div>
+    </h3>
+    <table class="ui table">
+      <tbody>
+        <tr>
+          <td class="wide two orange">Computer Name</td>
+          <td>TB45689</td>
+          <td class="wide two orange">Brand/Model</td>
+          <td>Acer</td>
+        </tr>
+        <tr>
+          <td class="wide two orange">Serial Number</td>
+          <td>168741538754123461</td>
+          <td class="wide two orange">รหัสทรัพย์สิน</td>
+          <td>TGB156442</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <h3 class="ui header">
+        <img class="ui image" src="assets/img/device-64.png">
+        <div class="content " style="color: #F37022">
+          ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card
+        </div>
+      </h3>
+      <table class="ui table">
+        <tbody>
+          <tr>
+            <td class="wide two orange">Device Name</td>
+            <td>
+              <label class="ui label"><i class="compact disc icon"></i>CD-ROM</label>
+              <label class="ui label"><i class="usb icon"></i>Thumb
+                Drive/Memory Card</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="wide two orange">เหตุผล</td>
+            <td>ใช้ย้ายไฟล์ เก็บไฟล์</td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td>
+              <a class="ui large label">
+                อนุมัติ
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="!states">
+            <td class="wide two orange">ผู้รับงาน</td>
+            <td class="ui form">
+              <div class="field">
+                <textarea name="" id="" cols="30" rows="3"></textarea>
+              </div>
+            </td>
+          </tr>
+          <tr *ngIf="!states">
+            <td class="wide two orange">ความคิดเห็น</td>
+            <td class="ui form">
+              <div class="field">
+                <textarea name="" id="" cols="30" rows="3"></textarea>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="actions" *ngIf="states">
+    <div class="ui green approve button" (click)="test('pending')">รับงาน</div>
+    <div class="ui red cancel button">ยกเลิก</div>
+    <div class="ui cancel button">ปิด</div>
+  </div>
+  <div class="actions" *ngIf="!states">
+    <div class="ui green approve button" (click)="test('completed')">เสร็จงาน</div>
+    <div class="ui red cancel button">ยกเลิก</div>
+    <div class="ui cancel button">ปิด</div>
+  </div>
+</div>

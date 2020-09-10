@@ -1,0 +1,10 @@
+ui.buttons .or:before {
+  content: 'หรือ' !important;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+}
+.super{
+  vertical-align: super;
+  font-size: 0.7em;
+  }

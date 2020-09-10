@@ -1,0 +1,15 @@
+.ui.ui.menu .orange.active.item, .ui.ui.orange.menu .active.item, .ui.ui.orange.menu .active.item:hover {
+  color: #f2711c;
+  font-size: 1.2em
+}
+.ui.styled.accordion {
+  width: 100%;
+}
+.ui.styled.accordion .active.title {
+  background: 0 0;
+  color: #F37022;
+}
+.ui.styled.accordion .accordion .active.title, .ui.styled.accordion .accordion .title:hover, .ui.styled.accordion .active.title, .ui.styled.accordion .title:hover {
+  background: 0 0;
+  color: #F37022;
+}

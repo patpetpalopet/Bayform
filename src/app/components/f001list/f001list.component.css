@@ -1,0 +1,7 @@
+.grey1{
+  color:#e8e8e8;
+}
+.ui.secondary.pointing.menu .active.item {
+  color: #f2711c;
+  font-size: 1.2em
+}

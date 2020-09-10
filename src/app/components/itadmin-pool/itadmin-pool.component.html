@@ -1,0 +1,135 @@
+<!-- <app-topmenu></app-topmenu> -->
+<div class="ui breadcrumb">
+  <a class="section" routerLink="/portal">หน้าหลัก</a>
+  <i class="right angle icon divider"></i>
+  <a class="section" routerLink="/portal">กลุ่มผู้ดูแลระบบไอที</a>
+  <i class="right angle icon divider"></i>
+  <div class="active section">รายการรออนุมัติ</div>
+</div>
+<div class="ten wide column">
+  <h2 class="ui header">
+    <img class="img" src="assets/img/form.svg">
+    <div class="content">
+      รายการรออนุมัติ
+      <div class="sub header"> รายการรออนุมัติ การร้องขอที่มีสิทธิ์อนุมัติ ตามระดับ</div>
+    </div>
+  </h2>
+</div>
+<table class="ui orange selectable line table">
+  <thead>
+    <tr>
+      <th>วันที่ร้องขอ</th>
+      <th>ชื่อผู้ขอ</th>
+      <th>ประเภทการร้องขอ</th>
+      <th>วัตถุประสงค์ในการขอใช้บริการ</th>
+      <th class="wide four"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Name">16/09/2562</td>
+      <td data-label="Name">สายัณห์ พรหมปัญโญ</td>
+      <td data-label="Age">ขอยกเว้นนโยบาย/มาตรฐาน</td>
+      <td data-label="Job">เพื่อทดสอบระบบ</td>
+      <td data-label="Job">
+        <div class="ui button" (click)="changeAp()"><i class="retweet icon"></i> เปลี่ยนแปลงผู้อนุมิติ</div>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Name">18/09/2562</td>
+      <td data-label="Age">บดินทร์ ด้วงสงกา</td>
+      <td data-label="Job">ขอยกเว้นนโยบาย/มาตรฐาน</td>
+      <td data-label="Job">เพื่อใช้งานติดต่อลูกค้า</td>
+      <td data-label="Job">
+        <div class="ui button"><i class="retweet icon"></i>เปลี่ยนแปลงผู้อนุมิติ</div>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Name">19/09/2562</td>
+      <td data-label="Age">บดินทร์ ด้วงสงกา</td>
+      <td data-label="Job">ขอสิทธิ์ใช้งาน Internet</td>
+      <td data-label="Job">ทำงาน</td>
+      <td data-label="Job">
+        <div class="ui button"><i class="retweet icon"></i>เปลี่ยนแปลงผู้อนุมิติ</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="ui pagination menu">
+  <a class="active item">
+    1
+  </a>
+  <a class=" item">
+    2
+  </a>
+  <a class=" item">
+    3
+  </a>
+  <div class="disabled item">
+    ...
+  </div>
+  <a class="item">
+    10
+  </a>
+  <a class="item">
+    11
+  </a>
+  <a class="item">
+    12
+  </a>
+</div>
+<div class="ui tiny modal">
+  <div class="header"><i class="retweet icon"></i>เปลี่ยนแปลงผู้อนุมิติ</div>
+  <div class="content">
+    <table class="ui table">
+      <tbody>
+        <tr>
+          <td class="wide three orange">ผู้อนุมัติที่ 1</td>
+          <td>
+            <select class="ui fluid search dropdown">
+              <option value="AL">บดินทร์ ด้วงสงกา</option>
+              <option value="AK">สายัณห์ พรหมปัญโญ</option>
+              <option value="AZ">กฤตวัฒน์ สุวานิชย์</option>
+              <option value="AR">ชนินธร เจนงามกุล</option>
+              <option value="CA">ปรารถนา พ่วงบางโพ</option>
+              <option value="CO">น้ำทิพย์ ผจงชวโรจน์</option>
+              <option value="CT">ปุณยวีร์ เรืองอร่าม</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class=" orange">ผู้อนุมัติที่ 2</td>
+          <td>
+            <select class="ui fluid search dropdown">
+              <option value="AL">สายัณห์ พรหมปัญโญ</option>
+              <option value="AK">บดินทร์ ด้วงสงกา</option>
+              <option value="AZ">กฤตวัฒน์ สุวานิชย์</option>
+              <option value="AR">ชนินธร เจนงามกุล</option>
+              <option value="CA">น้ำทิพย์ ผจงชวโรจน์</option>
+              <option value="CO">ปรารถนา พ่วงบางโพ</option>
+              <option value="CT">ปุณยวีร์ เรืองอร่าม</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class=" orange">ผู้อนุมัติที่ 3</td>
+          <td>
+            <select class="ui fluid search dropdown">
+              <option value="AL">กฤตวัฒน์ สุวานิชย์</option>
+              <option value="AK">ชนินธร เจนงามกุล</option>
+              <option value="AZ">บดินทร์ ด้วงสงกา</option>
+              <option value="AR">สายัณห์ พรหมปัญโญ</option>
+              <option value="CA">ปรารถนา พ่วงบางโพ</option>
+              <option value="CO">น้ำทิพย์ ผจงชวโรจน์</option>
+              <option value="CT">ปุณยวีร์ เรืองอร่าม</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="actions">
+    <div class="ui approve green button">บันทึก</div>
+    <div class="ui cancel button">ยกเลิก</div>
+  </div>
+</div>

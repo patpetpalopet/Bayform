@@ -1,0 +1,9 @@
+.ui.ui.inverted.red.menu {
+    background-color: #322C2C;
+}
+.ui.ui.inverted.red.menu .active.item {
+  background-color: #FFC423;
+}
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+}

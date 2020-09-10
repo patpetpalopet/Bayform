@@ -1,0 +1,380 @@
+<!-- <app-topmenu></app-topmenu> -->
+<div class="ui breadcrumb">
+  <a class="section" routerLink="/portal">หน้าหลัก</a>
+  <i class="right angle icon divider"></i>
+  <a class="section" routerLink="/approve">รายการรออนุมัติ</a>
+  <i class="right angle icon divider"></i>
+  <div class="active section">หน้าอนุมัติคำขอ</div>
+</div>
+<div class="ten wide column">
+  <h2 class="ui header">
+    <img class="img" src="assets/img/form.svg">
+    <div class="content">
+      หน้าอนุมัติคำขอ
+      <div class="sub header"> รายการรออนุมัติ การร้องขอที่มีสิทธิ์อนุมัติ ตามระดับ</div>
+    </div>
+  </h2>
+</div><br>
+<div>
+  <div class="segment stacked ui form">
+    <h3 class="ui header">
+      <img class="ui image" src="assets/img/icons8-checked-identification-documents-64.png">
+      <div class="content " style="color: #F37022">
+        รายละเอียดผู้ขอทั่วไป
+      </div>
+    </h3>
+    <table class="ui table">
+      <tbody>
+        <tr>
+          <td class="wide three orange">ชื่อ-สกุล (ไทย)</td>
+          <td class="wide five">สายัณห์ พรหมปัญโญ</td>
+          <td class="wide two orange">รหัสพนักงาน</td>
+          <td colspan="3">10000933</td>
+        </tr>
+        <tr>
+          <td class="orange">ชื่อ-สกุล (ENG)</td>
+          <td>SAYAN PROMPANYO</td>
+          <td class="orange">RC Code</td>
+          <td colspan="3">14103000399</td>
+        </tr>
+        <tr>
+          <td class="orange">ตำแหน่ง</td>
+          <td>เจ้าหน้าที่ระบบสารสนเทศและเทคโนโลยีอาวุโส</td>
+          <td class="orange">Project Code</td>
+          <td>-</td>
+          <td class="wide two orange">Account Code</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td class="orange">ส่วน/สาขา/กลุ่ม</td>
+          <td>ปฏิบัติการระบบเทคโนโลยีสารสนเทศ</td>
+          <td class="orange">โทรศัพท์</td>
+          <td colspan="3">02-2903400 #2252</td>
+        </tr>
+        <tr>
+          <td class="orange">ฝ่าย/สำนัก/สาย</td>
+          <td>IT ONSITE SUPPORT</td>
+          <td class="orange">E-mail</td>
+          <td colspan="3">Sayan.Pro@thanachart.co.th</td>
+        </tr>
+        <tr>
+          <td class="orange">สถานที่ติดตั้ง อาคาร/ชั้น </td>
+          <td colspan="5">HG</td>
+        </tr>
+        <tr>
+          <td class="orange">วัตถุประสงค์ในการขอใช้บริการ </td>
+          <td colspan="5">ใช้เพื่อการทดสอบ</td>
+        </tr>
+        <tr>
+          <td class="orange">ประเภทการขอ</td>
+          <td colspan="5">ขอเพื่อใช้งานเอง</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="ui header">
+      <img class="ui image" src="assets/img/computer-64.png">
+      <div class="content " style="color: #F37022">
+        ข้อมูลเครื่องคอมพิวเตอร์
+      </div>
+    </h3>
+    <table class="ui table">
+      <tbody>
+        <tr>
+          <td class="wide two orange">Computer Name</td>
+          <td>TB45689</td>
+          <td class="wide two orange">Brand/Model</td>
+          <td>Acer</td>
+        </tr>
+        <tr>
+          <td class="wide two orange">Serial Number</td>
+          <td>168741538754123461</td>
+          <td class="wide two orange">รหัสทรัพย์สิน</td>
+          <td>TGB156442</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <h3 class="ui header">
+        <img class="ui image" src="assets/img/device-64.png">
+        <div class="content " style="color: #F37022">
+          ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card
+        </div>
+      </h3>
+      <table class="ui table">
+        <tbody>
+          <tr>
+            <td class="wide two orange">Device Name</td>
+            <td>
+              <label class="ui label"><i class="compact disc icon"></i>CD-ROM</label>
+              <label class="ui label"><i class="usb icon"></i>Thumb
+                Drive/Memory Card</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="wide two orange">เหตุผล</td>
+            <td>ใช้ย้ายไฟล์ เก็บไฟล์</td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td *ngIf="reqid==1">
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle yellow right icon"></i>
+              <div class="ui label">
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle grey1 right icon"></i>
+              <div class="ui label">
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+            <td *ngIf="reqid==2">
+              <div class="ui green label">
+                <i class="check icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle yellow right icon"></i>
+              <div class="ui label">
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+            <td *ngIf="reqid==3">
+              <div class="ui green label">
+                <i class="check icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui green label">
+                <i class="check icon"></i>
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td>
+              <div class="ui large  buttons" *ngIf="isd==false">
+                <button class="ui red button"
+                  (click)="change(divieLabel,'ไม่อนุมัติ','red',isd);isd=true;">ไม่อนุมัติ</button>
+                <div class="or"></div>
+                <button class="ui positive button "
+                  (click)="change(divieLabel,'อนุมัติ','green',isd);isd=true;">อนุมัติ</button>
+              </div>
+              <a class="ui large {{divieLabel.color}} label" *ngIf="isd==true">
+                {{divieLabel.text}}
+                <i class="close icon" (click)="isd=false"></i>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="divieLabel.text=='ไม่อนุมัติ'&&isd==true">
+            <td class="wide two orange">ความคิดเห็น</td>
+            <td class="ui form">
+              <div class="field">
+                <input type="text">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="padding-top: 1.5em;">
+      <h3 class="ui header">
+        <img class="ui image" src="assets/img/VPN.svg">
+        <div class="content " style="color: #F37022">
+          ขอติดตั้ง VPN
+        </div>
+      </h3>
+      <table class="ui table">
+        <tbody>
+          <tr>
+            <td class="wide two orange">เหตุผล</td>
+            <td>ทำงานจากที่อื่นเพื่อทดสอบระบบ</td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td *ngIf="reqid==1">
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle yellow right icon"></i>
+              <div class="ui label">
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle grey1 right icon"></i>
+              <div class="ui label">
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+            <td *ngIf="reqid==2">
+              <div class="ui green label">
+                <i class="check icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle yellow right icon"></i>
+              <div class="ui label">
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+            <td *ngIf="reqid==3">
+              <div class="ui green label">
+                <i class="check icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui green label">
+                <i class="check icon"></i>
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td>
+              <div class="ui large  buttons" *ngIf="isv==false">
+                <button class="ui red button"
+                  (click)="change(vpnLabel,'ไม่อนุมัติ','red',isv);isv=true;">ไม่อนุมัติ</button>
+                <div class="or"></div>
+                <button class="ui positive button "
+                  (click)="change(vpnLabel,'อนุมัติ','green',isv);isv=true;">อนุมัติ</button>
+              </div>
+              <a class="ui large {{vpnLabel.color}} label" *ngIf="isv==true">
+                {{vpnLabel.text}}
+                <i class="close icon" (click)="isv=false"></i>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="vpnLabel.text=='ไม่อนุมัติ'&&isv==true">
+            <td class="wide two orange">ความคิดเห็น</td>
+            <td class="ui form">
+              <div class="field">
+                <input type="text">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="padding-top: 1.5em;">
+      <h3 class="ui header">
+        <img class="ui image" src="assets/img/social.svg">
+        <div class="content " style="color: #F37022">
+          ขอใช้งาน Facebook, Line, Youtube, Google Drive etc.
+        </div>
+      </h3>
+      <table class="ui table">
+        <tbody>
+          <tr>
+            <td class="wide two orange">Device Name</td>
+            <td>
+              <label class="ui label"><i style="color: #4267B2" class="ui icon facebook square"></i>Facebook</label>
+              <label class="ui label"><i style="color: #00B900" class="ui icon linechat"></i>Line</label>
+              <label class="ui label"><i style="color: #FE0000" class="ui icon youtube square"></i>Youtube</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="wide two orange">เหตุผล</td>
+            <td>เพื่อทำการตลาด และคุยกับลูกค้า</td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td *ngIf="reqid==1">
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle yellow right icon"></i>
+              <div class="ui label">
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle grey1 right icon"></i>
+              <div class="ui label">
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+            <td *ngIf="reqid==2">
+              <div class="ui green label">
+                <i class="check icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle yellow right icon"></i>
+              <div class="ui label">
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+            <td *ngIf="reqid==3">
+              <div class="ui green label">
+                <i class="check icon"></i>
+                3<span class="super">rd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui green label">
+                <i class="check icon"></i>
+                2<span class="super">nd</span> Line
+              </div>
+              <i class="angle green right icon"></i>
+              <div class="ui yellow label">
+                <i class="hourglass half icon"></i>
+                1<span class="super">st</span> Line
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="wide two orange">สถานะ</td>
+            <td>
+              <div class="ui large  buttons" *ngIf="iss==false">
+                <button class="ui red button"
+                  (click)="change(socailLabel,'ไม่อนุมัติ','red',iss);iss=true;">ไม่อนุมัติ</button>
+                <div class="or"></div>
+                <button class="ui positive button"
+                  (click)="change(socailLabel,'อนุมัติ','green',iss);iss=true;">อนุมัติ</button>
+              </div>
+              <a class="ui large {{socailLabel.color}} label" *ngIf="iss==true">
+                {{socailLabel.text}}
+                <i class="close icon" (click)="iss=false"></i>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="socailLabel.text=='ไม่อนุมัติ'&&iss==true">
+            <td class="wide two orange">ความคิดเห็น</td>
+            <td class="ui form">
+              <div class="field">
+                <input type="text">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+<button class="ui large fluid positive button" (click)="test('approved')">ยืนยันการอนุมัติ</button>
+<br><br><br>

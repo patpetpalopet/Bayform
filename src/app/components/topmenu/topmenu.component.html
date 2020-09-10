@@ -1,0 +1,29 @@
+<div class="ui  fixed borderless red huge inverted menu">
+  <a routerLink="/portal" class="header item">
+    <img class="logo" src="assets/img/512x512bb.png">
+    ธนาคารกรุงศรีอยุธยา
+  </a>
+  <a routerLink="/portal" routerLinkActive='active' class="item ">หน้าหลัก</a>
+  <a routerLink="/approve" routerLinkActive='active' *ngIf="tabmenu=='Approver'" class="item ">รอการอนุมิติ <div class="ui yellow basic label">5</div></a>
+  <a routerLink="/represent" routerLinkActive='active' *ngIf="tabmenu=='Approver'" class="item ">ผู้อนุมิติแทน<div class="ui yellow basic label">ปิด</div></a>
+  <a routerLink="/operation" routerLinkActive='active' *ngIf="tabmenu=='Worker'" class="item">งาน<div class="ui yellow basic label">10</div></a>
+  <a routerLink="/admin/poll" routerLinkActive='active' *ngIf="tabmenu=='Administrator'" class="item">กลุ่มผู้ดูแลระบบไอที</a>
+  <div class="right menu">
+    <div class="ui simple dropdown item">
+      {{tabmenu}} <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" (click)="tabmenu='User';" >User</a>
+        <a class="item" (click)="tabmenu='Approver';" >Approver</a>
+        <a class="item" (click)="tabmenu='Worker';" >Worker</a>
+        <a class="item" (click)="tabmenu='Administrator';" >Administrator</a>
+      </div>
+    </div>
+    <div class="item ">
+      <!-- <img class="ui avatar image" src="https://fomantic-ui.com/images/wireframe/square-image.png"> -->
+      <span>บดินทร์ ด้วงสงกา</span>
+    </div>
+    <a class="item ">ออกจากระบบ</a>
+    <a class="item">ช่วยเหลือ</a>
+  </div>
+</div>
+
