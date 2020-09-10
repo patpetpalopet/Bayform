@@ -22,7 +22,8 @@
     รายละเอียดผู้ขอ
   </a>
   <a class="item" data-tab="typee" (click)="scrollUp()">บริการที่ต้องการ</a>
-  <a class="item " data-tab="formfill" (click)="scrollUp()">รายละเอียดบริการ</a>
+  <a class="item " data-tab="formimg" (click)="scrollUp()">อัพโหลดรูป</a>
+  <a class="item " data-tab="formfill" (click)="scrollUp()">ประสงค์รับบัตร</a>
   <a class="item" data-tab="confirm" (click)="scrollUp()">ยืนยันข้อมูล</a>
 </div>
 <div class="ui active tab" data-tab="personal">
@@ -50,47 +51,13 @@
           </td>
         </tr>
         <tr>
-          <td class="yellow">ชื่อ-สกุล (ENG)</td>
-          <td>
-            <div class="ui fluid input">
-              <input type="text" [(ngModel)]="UserFill.Engname" [ngModelOptions]="{standalone: true}">
-            </div>
-          </td>
-          <td class="yellow">RC Code</td>
-          <td colspan="3">
-            <div class="ui fluid input">
-              <input type="text" [(ngModel)]="UserFill.RCCode" [ngModelOptions]="{standalone: true}">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="yellow">ตำแหน่ง</td>
-          <td>
-            <div class="ui fluid input">
-              <input type="text" [(ngModel)]="UserFill.Position" [ngModelOptions]="{standalone: true}">
-            </div>
-          </td>
-          <td class="yellow">Project Code</td>
-          <td>
-            <div class="ui fluid input">
-              <input type="text" [(ngModel)]="UserFill.ProjectCode" [ngModelOptions]="{standalone: true}">
-            </div>
-          </td>
-          <td class="wide two yellow">Account Code</td>
-          <td>
-            <div class="ui fluid input">
-              <input type="text" [(ngModel)]="UserFill.AccountCode" [ngModelOptions]="{standalone: true}">
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="yellow">ส่วน/สาขา/กลุ่ม</td>
+          <td class="yellow">ตำแหน่ง/ระดับ</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Section" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="yellow">โทรศัพท์</td>
+          <td class="yellow">กลุ่มธุรกิจ</td>
           <td colspan="3">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Phone" [ngModelOptions]="{standalone: true}">
@@ -98,16 +65,58 @@
           </td>
         </tr>
         <tr>
-          <td class="yellow">ฝ่าย/สำนัก/สาย</td>
+          <td class="yellow">กลุ่มงาน</td>
           <td>
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Division" [ngModelOptions]="{standalone: true}">
             </div>
           </td>
-          <td class="yellow">E-mail</td>
+          <td class="yellow">สายงาน</td>
           <td colspan="3">
             <div class="ui fluid input">
               <input type="text" [(ngModel)]="UserFill.Mail" [ngModelOptions]="{standalone: true}">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="yellow">ฝ่ายงาน</td>
+          <td>
+            <div class="ui fluid input">
+              <input type="text">
+            </div>
+          </td>
+          <td class="yellow">กลุ่ม</td>
+          <td colspan="3">
+            <div class="ui fluid input">
+              <input type="text">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="yellow">งาน</td>
+          <td>
+            <div class="ui fluid input">
+              <input type="text">
+            </div>
+          </td>
+          <td class="yellow">ทีม</td>
+          <td colspan="3">
+            <div class="ui fluid input">
+              <input type="text">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="yellow">ชั้น</td>
+          <td>
+            <div class="ui fluid input">
+              <input type="text">
+            </div>
+          </td>
+          <td class="yellow">เบอร์ติดต่อ</td>
+          <td colspan="3">
+            <div class="ui fluid input">
+              <input type="text">
             </div>
           </td>
         </tr>
@@ -117,319 +126,160 @@
   <button class="ui fluid yellow big right floated button" (click)="tabGoTo('typee')">ยืนยันข้อมูล</button>
 </div>
 <div class="ui tab " data-tab="typee">
-  <div class="ui one column stackable centered segment stacked page grid">
+  <div class="ui stacked segment "> <br> <br>
+    <div class="ui one column stackable centered  stacked page grid">
+      <h3 class="ui header">
+        <img class="ui image" src="assets/img/icons8-transaction-list-64.png">
+        <div class="content " style="color: #FFC423">
+          เลือกบริการ
+        </div>
+      </h3>
+      <div class="column twelve wide ui form">
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.divice">
+            <label>บัตรสูญหาย จำนวน 200 บาท</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.vpn">
+            <label>บัตรชำรุด จำนวน 100 บาท</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.ssss">
+            <label>เปลี่ยนชื่อ</label>
+          </div>
+          <div class="inline fields">
+            <div class="field">
+              <label>จาก</label>
+              <input type="text" name="" id="">
+            </div>
+            <div class="field">
+              <label>เป็น</label>
+              <input type="text" name="" id="">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.social">
+            <label>เปลี่ยนนามสกุล</label>
+          </div>
+          <div class="inline fields">
+            <div class="field">
+              <label>จาก</label>
+              <input type="text" name="" id="">
+            </div>
+            <div class="field">
+              <label>เป็น</label>
+              <input type="text" name="" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    โดยข้าพเจ้ายินยอมให้ธนาคารฯ หักค่าใช้จ่ายในการทำบัตรประจำตัวพนักงานใหม่จากบัญชีออมทรัพย์
+    ซึ่งเป็นบัญชีเงินเดือนของข้าพเจ้า จำนวน....................บาท <br> <br>
+    <strong>หมายเหตุ</strong><br>
+    - หากพนักงานได้รับการอนุมัติการทำบัตรประจำตัวพนักงานใหม่ภายในวันที่ 10 ของเดือน
+    ระบบจะทำการหักค่าใช้จ่ายในรอบบัญชีเงินเดือน เดือนเดียวกัน <br>
+    - หากพนักงานได้รับการอนุมัติการทำบัตรประจำตัวพนักงานใหม่หลังจากวันที่ 10 ของเดือนเป็นต้นไป
+    ระบบจะทำการหักค่าใช้จ่ายในรอบบัญชีเงินเดือน เดือนถัดไป <br>
+  </div>
+
+  <button class="ui fluid yellow big right floated button" (click)="tabGoTo('formfill')">ยืนยันข้อมูล</button>
+</div>
+<div class="ui tab " data-tab="formimg">
+  <div class="ui form centered segment stacked">
     <h3 class="ui header">
-      <img class="ui image" src="assets/img/icons8-transaction-list-64.png">
+      <img class="ui image" src="assets/img/icons8-checked-identification-documents-64.png">
       <div class="content " style="color: #FFC423">
-        เลือกบริการ
+        อัพโหลดรูป
+      </div>
+    </h3>
+    <img class="ui image centered" src="assets/img/profile.png"><br>
+    <input type="file" name="" id="">
+  </div>
+  <br>
+  <button class="ui fluid yellow big right floated button" (click)="tabGoTo('confirm')">ยืนยันข้อมูล</button>
+  <br><br>
+</div>
+<div class="ui tab " data-tab="formfill">
+  <div class="ui form segment stacked">
+    <h3 class="ui header">
+      <div class="content ">
+        เมื่อได้รับอีเมลยืนยันการรับบัตรประจำตัวพนักงานใหม่แล้ว ข้าพเจ้าประสงค์รับบัตรโดยช่องทาง (หมายเหตุ 2)
       </div>
     </h3>
     <div class="column twelve wide ui form">
       <div class="field">
         <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.divice">
-          <label>บัตรสูญหาย จำนวน 200 บาท</label>
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>รับด้วยตนเองที่ HR Service ชั้น 12</label>
         </div>
       </div>
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.vpn">
-          <label>บัตรชำรุด จำนวน 100 บาท</label>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.ssss">
-          <label>เปลี่ยนชื่อ</label>
-        </div>
-        <div class="inline fields" >
-          <div class="field">
-            <label>จาก</label>
-            <input type="text" name="" id="">
-          </div>
-          <div class="field">
-            <label>เป็น</label>
-            <input type="text" name="" id="">
-          </div>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="dataform.ServiceSelect.social">
-          <label>เปลี่ยนนามสกุล</label>
-        </div>
-        <div class="inline fields">
-          <div class="field">
-            <label>จาก</label>
-            <input type="text" name="" id="">
-          </div>
-          <div class="field">
-            <label>เป็น</label>
-            <input type="text" name="" id="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="ui fluid yellow big right floated button" (click)="tabGoTo('formfill')">ยืนยันข้อมูล</button>
-</div>
-
-<div class="ui tab " data-tab="formfill">
-  <div class="ui form segment stacked">
-    <h3 class="ui header">
-      <img class="ui image" src="assets/img/computer-64.png">
-      <div class="content " style="color: #FFC423">
-        ข้อมูลเครื่องคอมพิวเตอร์
-      </div>
-    </h3>
-    <div class="five fields">
-      <div class="field">
-        <label for="">Computer Name</label>
-        <select class="ui dropdown" id="ComputerInfo">
-          <option value=""></option>
-          <option value="{{In.ID}}" *ngFor="let In of Inven">{{In.Title}}</option>
-        </select>
-        <!-- <input type="text" [(ngModel)]="dataform.ComputerInfo.pc" [ngModelOptions]="{standalone: true}"> -->
-      </div>
-      <div class="field">
-        <label for="">Manufacturer</label>
-        <input type="text" [(ngModel)]="dataform.ComputerInfo.cn" [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="field">
-        <label for="">Model</label>
-        <input type="text" [(ngModel)]="dataform.ComputerInfo.brand" [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="field">
-        <label for="">Serial Number</label>
-        <input type="text" [(ngModel)]="dataform.ComputerInfo.sn" [ngModelOptions]="{standalone: true}">
-      </div>
-      <div class="field">
-        <label for="">Purchase Date</label>
-        <input type="text" [(ngModel)]="dataform.ComputerInfo.date" [ngModelOptions]="{standalone: true}">
-      </div>
-    </div>
-    <h3 class="ui header">
-      <img class="ui image" src="assets/img/form.png">
-      <div class="content " style="color: #FFC423">
-        ข้อมูลทั่วไป
-      </div>
-    </h3>
-    <div class="field">
-      <label for="">สถานที่ติดตั้ง อาคาร/ชั้น</label>
-      <input type="text" [(ngModel)]="dataform.Location" [ngModelOptions]="{standalone: true}">
-    </div>
-    <div class="field">
-      <label for="">วัตถุประสงค์ในการขอใช้บริการ (กรุณาระบุเหตุผลให้ชัดเจน) </label>
-      <textarea name="" id="" cols="30" rows="3" [(ngModel)]="dataform.Descriotion"
-        [ngModelOptions]="{standalone: true}"></textarea>
-    </div>
-    <div class="inline fields">
-      <label for="">ประเภทการขอ</label>
-      <div class="field">
-        <div class="ui  checkbox">
-          <input type="checkbox" [(ngModel)]="isSelf" [ngModelOptions]="{standalone: true}">
-          <label>ขอเพื่อใช้งานเอง</label>
-        </div>
-      </div>
-      <div class="field" (click)="onChangeAddlist(2)">
-        <div class="ui checkbox">
-          <input type="checkbox" [(ngModel)]="isOther" [ngModelOptions]="{standalone: true}">
-          <label>ขอเพื่อบุคคลอื่น</label>
-        </div>
-      </div>
-    </div>
-    <div class="field" *ngIf="isOther">
-      <table class="ui table">
-        <tbody>
-          <tr *ngIf="numshow>0">
-            <td class="wide one yellow">ชื่อ</td>
-            <td>ชนินธร เจนงามกุล</td>
-            <td class="wide two yellow">รหัสพนักงาน</td>
-            <td>10098516</td>
-            <td class="wide two yellow">Computer Name</td>
-            <td>TB591000958515P</td>
-            <td class="wide one ">
-              <div class="ui red fluid button" (click)="numshow=numshow-1">
-                ลบ
-              </div>
-            </td>
-          </tr>
-          <tr *ngIf="numshow>1">
-            <td class="wide one yellow">ชื่อ</td>
-            <td>กฤตวัฒน์ สุวานิชย์</td>
-            <td class="wide two yellow">รหัสพนักงาน</td>
-            <td>10015268</td>
-            <td class="wide two yellow">Computer Name</td>
-            <td>TB591000188562P</td>
-            <td class="wide one ">
-              <div class="ui red fluid button" (click)="numshow=numshow-1">
-                ลบ
-              </div>
-            </td>
-          </tr>
-          <tr *ngIf="numshow>2">
-            <td class="wide one yellow">ชื่อ</td>
-            <td>บดินทร์ ด้วงสงกา</td>
-            <td class="wide two yellow">รหัสพนักงาน</td>
-            <td>168154165413</td>
-            <td class="wide two yellow">Computer Name</td>
-            <td>681714631453</td>
-            <td class="wide one ">
-              <div class="ui red fluid button" (click)="numshow=numshow-1">
-                ลบ
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="wide one yellow">ชื่อ</td>
-            <td class="wide three">
-              <select class="ui fluid search dropdown" id="peplist">
-                <option value=""></option>
-                <option value="{{pep.id}}" *ngFor="let pep of peplist">{{pep.name}}</option>
-              </select>
-            </td>
-            <td class="wide two yellow">รหัสพนักงาน</td>
-            <td class="wide two">
-              {{peplistId}}
-            </td>
-            <td class="wide two yellow">Computer Name</td>
-            <td class="wide two">
-              <select class="ui fluid search dropdown">
-                <option value=""></option>
-                <option value="{{pep.id}}" *ngFor="let pep of peplist">{{pep.comname}}</option>
-              </select>
-            </td>
-            <td class="wide one ">
-              <div class="ui yellow fluid button" (click)="numshow=numshow+1">
-                เพิ่ม
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="ui styled accordion">
-    <!-- *ngIf="dataform.ServiceSelect.divice==true" -->
-    <div class="title" *ngIf="dataform.ServiceSelect.divice==true">
-      <i class="dropdown icon"></i>
-      ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card
-    </div>
-    <div class="content ui form" *ngIf="dataform.ServiceSelect.divice==true">
       <div class="inline fields">
-        <label for="">เลือก Device</label>
-        <div class="two wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="DiviceService.DeviceSelect.cdrom.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label><i class="compact disc icon"></i>CD-ROM</label>
-          </div>
-        </div>
-        <div class="four wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="DiviceService.DeviceSelect.thumb.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label><i class="usb icon"></i>Thumb Drive/Memory Card</label>
-          </div>
-        </div>
-        <div class="two wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden"
-              [(ngModel)]="DiviceService.DeviceSelect.bluetooth.IsSelect" [ngModelOptions]="{standalone: true}">
-            <label><i class="bluetooth icon"></i>Bluetooth</label>
-          </div>
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>จัดส่งที่ตึก KSPO ชั้น</label>
         </div>
         <div class="field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="DiviceService.DeviceSelect.other.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label>อื่น ๆ</label>
-          </div>
-        </div>
-        <div class="five wide field">
-          <label for=""></label>
-          <input *ngIf="DiviceService.DeviceSelect.other.IsSelect==true" type="text"
-            [(ngModel)]="DiviceService.DeviceSelect.other.Title" [ngModelOptions]="{standalone: true}">
+          <label></label>
+          <input type="text" name="" id="">
         </div>
       </div>
-      <div class="field">
-        <label for="">กรุณาระบุเหตุผลโดยละเอียด</label>
-        <textarea name="" id="" cols="30" rows="3" [(ngModel)]="DiviceService.Descriprion"
-          [ngModelOptions]="{standalone: true}"></textarea>
-      </div>
-    </div>
-    <!-- *ngIf="dataform.ServiceSelect.vpn==true" -->
-    <div class="title" *ngIf="dataform.ServiceSelect.vpn==true">
-      <i class="dropdown icon"></i>
-      ขอติดตั้ง VPN
-    </div>
-    <div class="ui form content" *ngIf="dataform.ServiceSelect.vpn==true">
-      <div class="field">
-        <label for="">กรุณาระบุเหตุผลโดยละเอียด</label>
-        <textarea name="" id="" cols="30" rows="3" [(ngModel)]="VPNService.Description"
-          [ngModelOptions]="{standalone: true}"></textarea>
-      </div>
-    </div>
-    <!-- *ngIf="dataform.ServiceSelect.social==true" -->
-    <div class="title" *ngIf="dataform.ServiceSelect.social==true">
-      <i class="dropdown icon"></i>
-      ขอใช้งาน Facebook, Line, Youtube, Google Drive etc.
-    </div>
-    <div class="content ui form" *ngIf="dataform.ServiceSelect.social==true">
       <div class="inline fields">
-        <label for="">เลือก</label>
-        <div class="two wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden"
-              [(ngModel)]="SocialService.SocialSelect.facebook.IsSelect" [ngModelOptions]="{standalone: true}">
-            <label><i style="color: #4267B2" class="ui icon facebook square"></i>Facebook</label>
-          </div>
-        </div>
-        <div class="two wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="SocialService.SocialSelect.line.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label><i style="color: #00B900" class="ui icon linechat"></i>Line</label>
-          </div>
-        </div>
-        <div class="two wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="SocialService.SocialSelect.youtube.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label><i style="color: #FE0000" class="ui icon youtube square"></i>Youtube</label>
-          </div>
-        </div>
-        <div class="three wide field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="SocialService.SocialSelect.google.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label><i style="color: #4285F4" class="ui icon google drive"></i>Google Drive etc.</label>
-          </div>
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>จัดส่งที่สาขา</label>
         </div>
         <div class="field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" [(ngModel)]="SocialService.SocialSelect.other.IsSelect"
-              [ngModelOptions]="{standalone: true}">
-            <label>อื่น ๆ</label>
-          </div>
-        </div>
-        <div class="five wide field">
-          <label for=""></label>
-          <input *ngIf="SocialService.SocialSelect.other.IsSelect==true" type="text"
-            [(ngModel)]="SocialService.SocialSelect.other.Title" [ngModelOptions]="{standalone: true}">
+          <label></label>
+          <input type="text" name="" id="">
         </div>
       </div>
-      <div class="field">
-        <label for="">กรุณาระบุเหตุผลโดยละเอียด</label>
-        <textarea name="" id="" cols="30" rows="3" [(ngModel)]="SocialService.Description"
-          [ngModelOptions]="{standalone: true}"></textarea>
+      <div class="inline fields">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>จัดส่งที่ศูนย์ธุรกิจ/สำนักงานภาค ที่อยู่</label>
+        </div>
+        <div class="field">
+          <label></label>
+          <input type="text" name="" id="">
+        </div>
+        <div class="field">
+          <label>อาคาร</label>
+          <input type="text" name="" id="">
+        </div>
+        <div class="field">
+          <label>ชั้น</label>
+          <input type="text" name="" id="">
+        </div>
+      </div>
+      <div class="inline fields">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>จัดส่งที่ตึก</label>
+        </div>
+        <div class="field">
+          <label></label>
+          <input type="text" name="" id="">
+        </div>
+        <div class="field">
+          <label>ชั้น</label>
+          <input type="text" name="" id="">
+        </div>
       </div>
     </div>
+    <strong>หมายเหตุ</strong> <br>
+    - สำหรับพนักงานที่ปฏิบัติงานอยู่ ณ สำนักงานใหญ่: ติดต่อรับที่ HR Service ชั้น 12<br>
+    - สำหรับพนักงานที่ปฏิบัติงานอยู่ ณ KSPO, ต้นสน, พลินจิตทาวเวอร์, All season, บางนาทาวเวอร์ หรือ
+    สาขาส่วนกลาง:ฝ่ายปฏิบัติการทรัพยากรบุคคลนำส่งตามที่อยู่สาขาผ่านช่องทาง Clearing<br>
+    - สำหรับพนักงานที่ปฏิบัติงานอยู่ ณ สาขาส่วนภูมิภาค: ฝ่ายปฏิบัติการทรัพยากรบุคคลนำส่งตามที่อยู่สาขาทางไปรษณีย์<br>
   </div>
-  <div
-    *ngIf="dataform.ServiceSelect.divice!=true&&dataform.ServiceSelect.vpn!=true&&dataform.ServiceSelect.social!=true">
-    คุณยังไม่ได้เลือกบริการ กรุณาเลือกบริการที่ต้องการ
-    ก่อนเข้าหน้านี้</div>
   <br>
   <button class="ui fluid yellow big right floated button" (click)="tabGoTo('confirm')">ยืนยันข้อมูล</button>
   <br><br>
@@ -446,182 +296,59 @@
       <tbody>
         <tr>
           <td class="wide three yellow">ชื่อ-สกุล (ไทย)</td>
-          <td class="wide five">{{UserFill.Thainame}}</td>
+          <td class="wide five">
+
+          </td>
           <td class="wide two yellow">รหัสพนักงาน</td>
-          <td colspan="3">{{UserFill.EmployeeId}}</td>
+          <td colspan="3">
+
+          </td>
         </tr>
         <tr>
-          <td class="yellow">ชื่อ-สกุล (ENG)</td>
-          <td>{{UserFill.Engname}}</td>
-          <td class="yellow">RC Code</td>
-          <td colspan="3">{{UserFill.RCCode}}</td>
+          <td class="yellow">ตำแหน่ง/ระดับ</td>
+          <td>
+
+          </td>
+          <td class="yellow">กลุ่มธุรกิจ</td>
+          <td colspan="3">
+
+          </td>
         </tr>
         <tr>
-          <td class="yellow">ตำแหน่ง</td>
-          <td>{{UserFill.Position}}</td>
-          <td class="yellow">Project Code</td>
-          <td>{{UserFill.ProjectCode}}</td>
-          <td class="wide two yellow">Account Code</td>
-          <td>{{UserFill.AccountCode}}</td>
+          <td class="yellow">กลุ่มงาน</td>
+          <td>
+
+          </td>
+          <td class="yellow">สายงาน</td>
+          <td colspan="3">
+          </td>
         </tr>
         <tr>
-          <td class="yellow">ส่วน/สาขา/กลุ่ม</td>
-          <td>{{UserFill.Section}}</td>
-          <td class="yellow">โทรศัพท์</td>
-          <td colspan="3">{{UserFill.Phone}}</td>
+          <td class="yellow">ฝ่ายงาน</td>
+          <td>
+          </td>
+          <td class="yellow">กลุ่ม</td>
+          <td colspan="3">
+          </td>
         </tr>
         <tr>
-          <td class="yellow">ฝ่าย/สำนัก/สาย</td>
-          <td>{{UserFill.Division}}</td>
-          <td class="yellow">E-mail</td>
-          <td colspan="3">{{UserFill.Mail}}</td>
+          <td class="yellow">งาน</td>
+          <td>
+          </td>
+          <td class="yellow">ทีม</td>
+          <td colspan="3">
+          </td>
         </tr>
         <tr>
-          <td class="yellow">สถานที่ติดตั้ง อาคาร/ชั้น </td>
-          <td colspan="5">{{dataform.Location}}</td>
-        </tr>
-        <tr>
-          <td class="yellow">วัตถุประสงค์ในการขอใช้บริการ (กรุณาระบุเหตุผลให้ชัดเจน) </td>
-          <td colspan="5">{{dataform.Descriotion}}</td>
-        </tr>
-        <tr>
-          <td class="yellow">ประเภทการขอ</td>
-          <td colspan="5">
-            <span *ngIf="isSelf">ขอเพื่อใช้งานเอง</span>
-            &nbsp;&nbsp;
-            <span *ngIf="isOther">ขอเพื่อบุคคลอื่น</span>
+          <td class="yellow">ชั้น</td>
+          <td>
+          </td>
+          <td class="yellow">เบอร์ติดต่อ</td>
+          <td colspan="3">
           </td>
         </tr>
       </tbody>
     </table>
-    <table class="ui table" *ngIf="isOther">
-      <tbody>
-        <tr *ngIf="numshow>0">
-          <td class="wide one yellow">ชื่อ</td>
-          <td>ชนินธร เจนงามกุล</td>
-          <td class="wide two yellow">รหัสพนักงาน</td>
-          <td>10098516</td>
-          <td class="wide two yellow">Computer Name</td>
-          <td>TB591000958515P</td>
-        </tr>
-        <tr *ngIf="numshow>1">
-          <td class="wide one yellow">ชื่อ</td>
-          <td>กฤตวัฒน์ สุวานิชย์</td>
-          <td class="wide two yellow">รหัสพนักงาน</td>
-          <td>10015268</td>
-          <td class="wide two yellow">Computer Name</td>
-          <td>TB591000188562P</td>
-        </tr>
-        <tr *ngIf="numshow>2">
-          <td class="wide one yellow">ชื่อ</td>
-          <td>บดินทร์ ด้วงสงกา</td>
-          <td class="wide two yellow">รหัสพนักงาน</td>
-          <td>168154165413</td>
-          <td class="wide two yellow">Computer Name</td>
-          <td>681714631453</td>
-        </tr>
-      </tbody>
-    </table>
-    <h3 class="ui header">
-      <img class="ui image" src="assets/img/computer-64.png">
-      <div class="content " style="color: #FFC423">
-        ข้อมูลเครื่องคอมพิวเตอร์
-      </div>
-    </h3>
-    <table class="ui table">
-      <tbody>
-        <tr>
-          <td class="wide two yellow">Computer Name</td>
-          <td>{{dataform.ComputerInfo.cn}}</td>
-          <td class="wide two yellow">Brand/Model</td>
-          <td>{{dataform.ComputerInfo.brand}}</td>
-        </tr>
-        <tr>
-          <td class="wide two yellow">Serial Number</td>
-          <td>{{dataform.ComputerInfo.sn}}</td>
-          <td class="wide two yellow">รหัสทรัพย์สิน</td>
-          <td>{{dataform.ComputerInfo.pc}}</td>
-        </tr>
-      </tbody>
-    </table>
-    <div *ngIf="dataform.ServiceSelect.divice">
-      <h3 class="ui header">
-        <img class="ui image" src="assets/img/device-64.png">
-        <div class="content " style="color: #FFC423">
-          ขอสิทธิ์ใช้งาน Device/Thumb Drive/Memory Card
-        </div>
-      </h3>
-      <table class="ui table">
-        <tbody>
-          <tr>
-            <td class="wide two yellow">Device Name</td>
-            <td>
-              <label class="ui label" *ngIf="DiviceService.DeviceSelect.cdrom.IsSelect"><i
-                  class="compact disc icon"></i>CD-ROM</label>
-              <label class="ui label" *ngIf="DiviceService.DeviceSelect.thumb.IsSelect"><i class="usb icon"></i>Thumb
-                Drive/Memory Card</label>
-              <label class="ui label" *ngIf="DiviceService.DeviceSelect.bluetooth.IsSelect"><i
-                  class="bluetooth icon"></i>Bluetooth</label>
-              <label class="ui label"
-                *ngIf="DiviceService.DeviceSelect.other.IsSelect">{{DiviceService.DeviceSelect.other.Title}}</label>
-            </td>
-          </tr>
-          <tr>
-            <td class="wide two yellow">เหตุผล</td>
-            <td>{{DiviceService.Descriprion}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div *ngIf="dataform.ServiceSelect.vpn" style="padding-top: 1.5em;">
-      <h3 class="ui header">
-        <img class="ui image" src="assets/img/VPN.svg">
-        <div class="content " style="color: #FFC423">
-          ขอติดตั้ง VPN
-        </div>
-      </h3>
-      <table class="ui table">
-        <tbody>
-          <tr>
-            <td class="wide two yellow">เหตุผล</td>
-            <td>{{VPNService.Description}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div *ngIf="dataform.ServiceSelect.social" style="padding-top: 1.5em;">
-      <h3 class="ui header">
-        <img class="ui image" src="assets/img/social.svg">
-        <div class="content " style="color: #FFC423">
-          ขอใช้งาน Facebook, Line, Youtube, Google Drive etc.
-        </div>
-      </h3>
-      <table class="ui table">
-        <tbody>
-          <tr>
-            <td class="wide two yellow">Device Name</td>
-            <td>
-              <label class="ui label" *ngIf="SocialService.SocialSelect.facebook.IsSelect"><i style="color: #4267B2"
-                  class="ui icon facebook square"></i>Facebook</label>
-              <label class="ui label" *ngIf="SocialService.SocialSelect.line.IsSelect"><i style="color: #00B900"
-                  class="ui icon linechat"></i>Line</label>
-              <label class="ui label" *ngIf="SocialService.SocialSelect.youtube.IsSelect"><i style="color: #FE0000"
-                  class="ui icon youtube square"></i>Youtube</label>
-              <label class="ui label" *ngIf="SocialService.SocialSelect.google.IsSelect"><i style="color: #4285F4"
-                  class="ui icon google drive"></i>Google Drive
-                etc.</label>
-              <label class="ui label"
-                *ngIf="SocialService.SocialSelect.other.IsSelect">{{SocialService.SocialSelect.other.Title}}</label>
-            </td>
-          </tr>
-          <tr>
-            <td class="wide two yellow">เหตุผล</td>
-            <td>{{SocialService.Description}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
   </div>
   <button class="ui fluid yellow big right floated button" (click)="test('req')">ส่งคำขอ</button>
   <!-- <button class="ui fluid yellow big right floated button"  routerLink="/f001/list">ส่งคำขอ</button> -->
